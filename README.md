@@ -1,5 +1,3 @@
-
-````markdown
 # 🌟 Kurikulum AI — Rancang Jalur Belajar Pintar dengan Gemini
 
 **Kurikulum AI** adalah aplikasi web cerdas yang membantu Anda membangun *roadmap* atau kurikulum belajar yang **dipersonalisasi** secara instan, berkat kekuatan **Google Generative AI (Gemini)**.  
