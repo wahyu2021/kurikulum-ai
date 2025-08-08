@@ -1,6 +1,3 @@
-Berikut adalah versi **README.md** yang sudah diperindah dan diformat secara profesional untuk proyek **Kurikulum AI**:
-
----
 
 ````markdown
 # 🌟 Kurikulum AI — Rancang Jalur Belajar Pintar dengan Gemini
