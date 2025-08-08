@@ -131,5 +131,3 @@ Proyek ini menggunakan **Lisensi MIT** — silakan lihat file [`LICENSE`](./LICE
 
 Dibuat dengan ❤️ oleh [Wahyu Wahid Nugroho](https://github.com/wahyu2021)
 Untuk pertanyaan atau kolaborasi, hubungi via GitHub atau email di profil saya.
-
-```
