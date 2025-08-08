@@ -2,7 +2,7 @@
 
  **Kurikulum AI** adalah sebuah aplikasi web cerdas yang dirancang untuk membuat *roadmap* atau kurikulum belajar yang dipersonalisasi menggunakan kekuatan Google Generative AI. Cukup masukkan topik yang ingin Anda pelajari dan level keahlian Anda saat ini, dan biarkan AI menyusun jalur belajar yang terstruktur untuk Anda.
 
-**[Lihat Demo Langsung](https://www.google.com/search?q=https://kurikulum-ai-vercel.app/)** ---
+**[Lihat Demo Langsung](https://www.google.com/search?q=https://kurikulum-ai-vercel.app/)**
 
 ## \#\# Deskripsi Proyek
 
