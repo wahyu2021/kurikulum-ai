@@ -91,7 +91,7 @@ export class ParticleLoader {
     constructor(canvasId: string) {
         this.canvas = document.getElementById(canvasId) as HTMLCanvasElement;
         if (!this.canvas) throw new Error("Canvas element not found!");
-        this.ctx = this.canvas.getContext("2d")!;
+        this.ctx = this.canvas.getContext("2d", { willReadFrequently: true })!;
         this.resize();
     }
 
@@ -120,8 +120,8 @@ export class ParticleLoader {
         );
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-        for (let y = 0; y < textCoordinates.height; y += 1) {
-            for (let x = 0; x < textCoordinates.width; x += 1) {
+        for (let y = 0; y < textCoordinates.height; y += 3) {
+            for (let x = 0; x < textCoordinates.width; x += 3) {
                 if (
                     textCoordinates.data[
                         y * 4 * textCoordinates.width + x * 4 + 3
@@ -140,7 +140,7 @@ export class ParticleLoader {
             }
         }
 
-        const ambientParticleCount = 1000;
+        const ambientParticleCount = 200;
         for (let i = 0; i < ambientParticleCount; i++) {
             const randomX = Math.random() * this.canvas.width;
             const randomY = Math.random() * this.canvas.height;

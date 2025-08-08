@@ -6,25 +6,19 @@ import { Sparkles } from "lucide-react";
 import { useRoadmapGenerator } from "@/hooks/useRoadmapGenerator";
 import { motion } from "framer-motion";
 import { InteractiveBackground } from "@/components/InteractiveBackground";
-import { ParticleLoader } from "@/lib/particle-loader";
-import { useEffect } from "react";
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+
+const ParticleLoader = dynamic(
+  () => import('@/components/ParticleLoaderComponent'),
+  { 
+    ssr: false,
+    loading: () => null,
+  } 
+);
 
 export default function HomePage() {
   const { roadmapData, isLoading, error, generateRoadmap } = useRoadmapGenerator();
-
-  useEffect(() => {
-    const loaderElement = document.getElementById('loader');
-    const particleLoader = new ParticleLoader('particle-canvas');
-
-    if (loaderElement) {
-      particleLoader.start();
-
-      setTimeout(() => {
-        loaderElement.classList.add('hidden');
-        setTimeout(() => particleLoader.stop(), 1500);
-      }, 6500);
-    }
-  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,6 +30,10 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-screen font-sans text-white bg-slate-900 overflow-x-hidden">
+      <Suspense fallback={null}>
+        <ParticleLoader />
+      </Suspense>
+
       <InteractiveBackground />
 
       <div className="relative z-10">

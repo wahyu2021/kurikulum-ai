@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { z } from "zod";
 
-// Skema validasi request
 const requestSchema = z.object({
     topic: z
         .string()
